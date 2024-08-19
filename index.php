@@ -51,11 +51,15 @@ session_start();
                         <a class="nav-link" href="#blog">Blog</a>
                     </li>
                     <?php if (isset($_SESSION['name'])): ?>
+                        <?php if ($_SESSION['name'] === 'admin'): ?>
+                            <li class="nav-item"><a class="nav-link" href="adminPanel.php">Dashboard</a></li>
+                        <?php endif; ?>
                         <li class="nav-item"><a class="nav-link" href="addEvent.html">Add Event</a></li>
                         <li class="nav-item"><a class="nav-link" href="/ZooParc/assets/php/logout.php">Log Out</a></li>
                     <?php endif; ?>
                 </ul>
-                <a href="<?php echo isset($_SESSION['name']) ? '#' : 'signUp.html'; ?>" class="btn btn-brand ms-lg-3">
+                <a href="<?php echo isset($_SESSION['name']) ? '#' : 'signUp.html'; ?>"
+                    class="btn btn-brand ms-lg-3">
                     <?php
                     if (isset($_SESSION['name'])) {
                         echo $_SESSION['name'];
@@ -312,7 +316,9 @@ session_start();
                     <div class="section-title">
                         <h1 class="display-4 fw-semibold">Events</h1>
                         <div class="line"></div>
-                        <p>Join us at ZooParc for events that bring the wonders of wildlife to life. From educational workshops to live animal shows, our events offer fun and learning for everyone. Experience the excitement of nature through our special activities and seasonal celebrations.</p>
+                        <p>Join us at ZooParc for events that bring the wonders of wildlife to life. From educational
+                            workshops to live animal shows, our events offer fun and learning for everyone. Experience
+                            the excitement of nature through our special activities and seasonal celebrations.</p>
                     </div>
                 </div>
             </div>
