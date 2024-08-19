@@ -51,6 +51,7 @@ session_start();
                         <a class="nav-link" href="#blog">Blog</a>
                     </li>
                     <?php if (isset($_SESSION['name'])): ?>
+                        <li class="nav-item"><a class="nav-link" href="addEvent.html">Add Event</a></li>
                         <li class="nav-item"><a class="nav-link" href="/ZooParc/assets/php/logout.php">Log Out</a></li>
                     <?php endif; ?>
                 </ul>
@@ -303,155 +304,67 @@ session_start();
         </div>
     </section>
 
-    <!-- REVIEW -->
+    <!-- EVENTS -->
     <section id="reviews" class="section-padding bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
                     <div class="section-title">
-                        <h1 class="display-4 fw-semibold">Testimonials</h1>
+                        <h1 class="display-4 fw-semibold">Events</h1>
                         <div class="line"></div>
-                        <p>We love to craft digital experiances for brands rather than crap and more lorem ipsums and do
-                            crazy skills</p>
+                        <p>Join us at ZooParc for events that bring the wonders of wildlife to life. From educational workshops to live animal shows, our events offer fun and learning for everyone. Experience the excitement of nature through our special activities and seasonal celebrations.</p>
                     </div>
                 </div>
             </div>
-            <div class="row gy-5 gx-4">
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
-                    <div class="review">
-                        <div class="review-head p-4 bg-white theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                            <p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi
-                                rerum ipsam impedit dicta voluptatem.</p>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/avatar-1.jpg" alt="">
-                            <div class="ms-3">
-                                <h5>Dianne Russell</h5>
-                                <small>UX Architect</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="250">
-                    <div class="review">
-                        <div class="review-head p-4 bg-white theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                            <p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi
-                                rerum ipsam impedit dicta voluptatem.</p>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/avatar-2.jpg" alt="">
-                            <div class="ms-3">
-                                <h5>Dianne Russell</h5>
-                                <small>UX Architect</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
-                    <div class="review">
-                        <div class="review-head p-4 bg-white theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                            <p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi
-                                rerum ipsam impedit dicta voluptatem.</p>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/avatar-3.jpg" alt="">
-                            <div class="ms-3">
-                                <h5>Dianne Russell</h5>
-                                <small>UX Architect</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="450">
-                    <div class="review">
-                        <div class="review-head p-4 bg-white theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                            <p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi
-                                rerum ipsam impedit dicta voluptatem.</p>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/avatar-4.jpg" alt="">
-                            <div class="ms-3">
-                                <h5>Dianne Russell</h5>
-                                <small>UX Architect</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="550">
-                    <div class="review">
-                        <div class="review-head p-4 bg-white theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                            <p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi
-                                rerum ipsam impedit dicta voluptatem.</p>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/avatar-5.jpg" alt="">
-                            <div class="ms-3">
-                                <h5>Dianne Russell</h5>
-                                <small>UX Architect</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="650">
-                    <div class="review">
-                        <div class="review-head p-4 bg-white theme-shadow">
-                            <div class="text-warning">
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                                <i class="ri-star-fill"></i>
-                            </div>
-                            <p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi
-                                rerum ipsam impedit dicta voluptatem.</p>
-                        </div>
-                        <div class="review-person mt-4 d-flex align-items-center">
-                            <img class="rounded-circle" src="./assets/images/avatar-6.jpg" alt="">
-                            <div class="ms-3">
-                                <h5>Dianne Russell</h5>
-                                <small>UX Architect</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row gy-5 gx-4" id="events-container">
+                <!-- Event items will be inserted here by JavaScript -->
             </div>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/ZooParc/assets/php/fetchEvents.php')
+                .then(response => response.json())
+                .then(events => {
+                    const container = document.getElementById('events-container');
+                    container.innerHTML = ''; // Clear existing content
+
+                    events.forEach(event => {
+                        const col = document.createElement('div');
+                        col.className = 'col-lg-4 col-sm-6';
+                        col.setAttribute('data-aos', 'fade-down');
+                        col.setAttribute('data-aos-delay', '150');
+
+                        col.innerHTML = `
+            <div class="review">
+              <div class="review-head p-4 bg-white theme-shadow">
+                <div class="text-warning">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+                <p>${event.description}</p>
+              </div>
+              <div class="review-person mt-4 d-flex align-items-center">
+                <img class="rounded-circle" src="./assets/images/events.jpg" alt="">
+                <div class="ms-3">
+                  <h5>${event.event_name}</h5>
+                  <small>${event.event_date} </br> ${event.event_time} Onward</small>
+                </div>
+              </div>
+            </div>
+          `;
+
+                        container.appendChild(col);
+                    });
+                })
+                .catch(error => console.error('Error fetching events:', error));
+        });
+    </script>
+
 
     <section id="team" class="section-padding">
         <div class="container">
