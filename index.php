@@ -42,13 +42,7 @@ session_start();
                         <a class="nav-link" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#reviews">Reviews</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#team">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
+                        <a class="nav-link" href="#reviews">Events and Programs</a>
                     </li>
                     <?php if (isset($_SESSION['name'])): ?>
                         <?php if ($_SESSION['name'] === 'admin'): ?>
@@ -58,8 +52,7 @@ session_start();
                         <li class="nav-item"><a class="nav-link" href="/ZooParc/assets/php/logout.php">Log Out</a></li>
                     <?php endif; ?>
                 </ul>
-                <a href="<?php echo isset($_SESSION['name']) ? '#' : 'signUp.html'; ?>"
-                    class="btn btn-brand ms-lg-3">
+                <a href="<?php echo isset($_SESSION['name']) ? '#' : 'signUp.html'; ?>" class="btn btn-brand ms-lg-3">
                     <?php
                     if (isset($_SESSION['name'])) {
                         echo $_SESSION['name'];
@@ -250,8 +243,6 @@ session_start();
                     <div class="section-title">
                         <h1 class="display-4 fw-semibold">Our Portfolio</h1>
                         <div class="line"></div>
-                        <p>We love to craft digital experiances for brands rather than crap and more lorem ipsums and do
-                            crazy skills</p>
                     </div>
                 </div>
             </div>
@@ -314,7 +305,7 @@ session_start();
             <div class="row">
                 <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
                     <div class="section-title">
-                        <h1 class="display-4 fw-semibold">Events</h1>
+                        <h1 class="display-4 fw-semibold">Events and Programs</h1>
                         <div class="line"></div>
                         <p>Join us at ZooParc for events that bring the wonders of wildlife to life. From educational
                             workshops to live animal shows, our events offer fun and learning for everyone. Experience
@@ -371,54 +362,6 @@ session_start();
         });
     </script>
 
-
-    <section id="team" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
-                    <div class="section-title">
-                        <h1 class="display-4 fw-semibold">Co-funders</h1>
-                        <div class="line"></div>
-                        <p>We love to craft digital experiances for brands rather than crap and more lorem ipsums and do
-                            crazy skills</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-4 text-center ">
-                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
-                    <div class="team-member image-zoom">
-                        <div class="image-zoom-wrapper">
-                            <img src="./assets/images/about.jpg" alt="">
-                        </div>
-                        <div class="team-member-content">
-                            <h4 class="text-white">John Doe</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
-                    <div class="team-member image-zoom">
-                        <div class="image-zoom-wrapper">
-                            <img src="./assets/images/co3.jpg" alt="">
-                        </div>
-                        <div class="team-member-content">
-                            <h4 class="text-white">Robert Downey</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
-                    <div class="team-member image-zoom">
-                        <div class="image-zoom-wrapper">
-                            <img src="./assets/images/co4.jpg" alt="">
-                        </div>
-                        <div class="team-member-content">
-                            <h4 class="text-white">Christian Bale</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CONTACT -->
     <section class="section-padding bg-light" id="contact">
         <div class="container">
@@ -427,8 +370,6 @@ session_start();
                     <div class="section-title">
                         <h1 class="display-4 text-white fw-semibold">Gete in touch</h1>
                         <div class="line bg-white"></div>
-                        <p class="text-white">We love to craft digital experiances for brands rather than crap and more
-                            lorem ipsums and do crazy skills</p>
                     </div>
                 </div>
             </div>
@@ -460,88 +401,28 @@ session_start();
         </div>
     </section>
 
-    <!-- BLOG -->
-    <section id="blog" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
-                    <div class="section-title">
-                        <h1 class="display-4 fw-semibold">Recent News & Articles</h1>
-                        <div class="line"></div>
-                        <p>We love to craft digital experiances for brands rather than crap and more lorem ipsums and do
-                            crazy skills</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
-                    <div class="team-member image-zoom">
-                        <div class="image-zoom-wrapper">
-                            <img src="./assets/images/blog-post-1.jpg" alt="">
-                        </div>
-                        <h5 class="mt-4">Web Design 2022</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi quos magni!</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
-                    <div class="team-member image-zoom">
-                        <div class="image-zoom-wrapper">
-                            <img src="./assets/images/blog-post-2.jpg" alt="">
-                        </div>
-                        <h5 class="mt-4">Web Design 2022</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi quos magni!</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
-                    <div class="team-member image-zoom">
-                        <div class="image-zoom-wrapper">
-                            <img src="./assets/images/blog-post-3.jpg" alt="">
-                        </div>
-                        <h5 class="mt-4">Web Design 2022</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi quos magni!</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- FOOTER -->
     <footer class="bg-dark">
         <div class="footer-top">
             <div class="container">
                 <div class="row gy-5">
                     <div class="col-lg-3 col-sm-6">
-                        <a href="#"><img src="./assets/images/logo-white.svg" alt=""></a>
-                        <div class="line"></div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, hic!</p>
-                        <div class="social-icons">
-                            <a href="#"><i class="ri-twitter-fill"></i></a>
-                            <a href="#"><i class="ri-instagram-fill"></i></a>
-                            <a href="#"><i class="ri-github-fill"></i></a>
-                            <a href="#"><i class="ri-dribbble-fill"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
                         <h5 class="mb-0 text-white">SERVICES</h5>
                         <div class="line"></div>
                         <ul>
-                            <li><a href="#">UI Design</a></li>
-                            <li><a href="#">UX Design</a></li>
-                            <li><a href="#">Branding</a></li>
-                            <li><a href="#">Logo Designing</a></li>
+                            <li><a href="#">Guided Tours</a></li>
+                            <li><a href="#">Animal Care Programs</a></li>
+                            <li><a href="#">Research and Conservation</a></li>
+                            <li><a href="#">Educational Workshops</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <h5 class="mb-0 text-white">ABOUT</h5>
                         <div class="line"></div>
                         <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Career</a></li>
+                            <li><a href="#">Conservation Efforts</a></li>
+                            <li><a href="#">Educational Programs</a></li>
+                            <li><a href="#">Community Engagement</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-sm-6">
@@ -550,7 +431,7 @@ session_start();
                         <ul>
                             <li>New York, NY 3300</li>
                             <li>(414) 586 - 3017</li>
-                            <li>www.example.com</li>
+                            <li>www.ZooParc.com</li>
                         </ul>
                     </div>
                 </div>
@@ -566,10 +447,6 @@ session_start();
             </div>
         </div>
     </footer>
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
