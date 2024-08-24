@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
+    <title>Admin Panel - Users</title>
     <link rel="stylesheet" href="../ZooParc/assets/css/admin.css">
 </head>
 <body>
@@ -12,10 +12,10 @@
         <div class="sidebar">
             <h2>Admin Panel</h2>
             <ul>
-                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="adminPanel.php">Dashboard</a></li>
                 <li><a href="users.html">Users</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><a href="#logout">Logout</a></li>
+                <li><a href="../ZooParc/assets/php/logout.php">Logout</a></li>
             </ul>
         </div>
 
@@ -23,7 +23,7 @@
         <div class="main-content">
             <!-- Top Bar -->
             <div class="top-bar">
-                <h1>Dashboard</h1>
+                <h1>Events</h1>
                 <div class="profile">
                     <img src="./assets/images/avatar-1.jpg" alt="Profile Picture">
                     <span>Admin</span>
@@ -32,11 +32,21 @@
 
             <!-- Content Area -->
             <div class="content">
-                <h2>Welcome, Admin!</h2>
+                <h2>All events</h2>
+                <ul class="responsive-table" id="users-table">
+                    <li class="table-header">
+                        <div class="col col-1">ID</div>
+                        <div class="col col-2">Name</div>
+                        <div class="col col-3">Description</div>
+                        <div class="col col-5">Date</div>
+                        <div class="col col-5">Time</div>
+                    </li>
+                    <!-- User rows will be inserted here by JavaScript -->
+                </ul>                
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="../ZooParc/assets/js/events.js"></script>
 </body>
 </html>
