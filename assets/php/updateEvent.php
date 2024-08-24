@@ -1,39 +1,32 @@
 <?php
-header('Content-Type: application/json');
-$servername = "localhost"; // Replace with your database server name
-$username = "root"; // Replace with your database username
-$password = ""; // Replace with your database password
-$dbname = "zooparc"; // Replace with your database name
+$servername = "localhost";  // Replace with your database server name
+$username = "root";          // Replace with your database username
+$password = "";              // Replace with your database password
+$dbname = "zooparc";         // Replace with your database name
 
+$eventId = $_POST['id'];
+$name = $_POST['Ename'];
+$description = $_POST['Edesc'];
+$date = $_POST['Edate'];
+$time = $_POST['Etime'];
+
+// Your database connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+// Check connection
 if ($conn->connect_error) {
-    die(json_encode(["success" => false, "message" => "Connection failed: " . $conn->connect_error]));
+    die("Connection failed: " . $conn->connect_error);
 }
 
-$data = json_decode(file_get_contents("php://input"), true);
+$sql = "UPDATE events SET event_name = '$name', description = '$description', event_date = '$date', event_time = '$time' WHERE id = $eventId";
 
-if (isset($data['id'])) {
-    $eventId = $data['id'];
-    $eventName = $data['event_name'];
-    $eventDescription = $data['description'];
-    $eventDate = $data['event_date'];
-    $eventTime = $data['event_time'];
-
-    $sql = "UPDATE events SET event_name = ?, description = ?, event_date = ?, event_time = ? WHERE id = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssi", $eventName, $eventDescription, $eventDate, $eventTime, $eventId);
-
-    if ($stmt->execute()) {
-        echo json_encode(["success" => true]);
-    } else {
-        echo json_encode(["success" => false, "message" => "Error updating event: " . $stmt->error]);
-    }
-
-    $stmt->close();
+if ($conn->query($sql) === TRUE) {
+    echo "Event updated successfully";
+    header('Location: ../../events.html'); // Redirect back to events page
 } else {
-    echo json_encode(["success" => false, "message" => "No event ID provided"]);
+    echo "Error updating event: " . $conn->error;
 }
 
 $conn->close();
 ?>
+
