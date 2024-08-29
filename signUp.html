@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login & Sign Up</title>
-  <!---Custom CSS File--->
   <link rel="stylesheet" href="../ZooParc/assets/css/signUpStyle.css">
 </head>
 
@@ -42,6 +41,28 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', function(event) {
+
+        const emailInput = this.querySelector('input[name="email"]');
+        if (emailInput) {
+          const email = emailInput.value;
+          console.log("Email entered:", email);
+
+          const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+          if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            event.preventDefault();
+          }
+        } else {
+          console.error("Email input not found.");
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

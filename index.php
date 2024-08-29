@@ -430,7 +430,7 @@ session_start();
                         <div class="line"></div>
                         <ul>
                             <li>New York, NY 3300</li>
-                            <li>(414) 586 - 3017</li>
+                            <li>+94 76 381 1685</li>
                             <li>www.ZooParc.com</li>
                         </ul>
                     </div>
